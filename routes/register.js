@@ -4,9 +4,9 @@ const bcrypt = require("bcryptjs");
 const passport = require("passport");
 
 // Register Page
-router.get("/register", (req, res) => {
-  res.render("register");
-});
+// router.get("/register", (req, res) => {
+//   res.render("register");
+// });
 
 // Register Handle ///////////////////////////////////////////////////////////////////////
 router.post("/register", (req, res) => {

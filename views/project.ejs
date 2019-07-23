@@ -1,0 +1,22 @@
+<%= typeof msg != 'undefined' ? msg: "" %>
+<form action="/admin/projectPost" method="POST" enctype="multipart/form-data">
+  <div>
+    <label for="title">Titre :</label>
+    <input type="text" id="title" name="title" />
+  </div>
+  <div class="description">
+    <label for="msg">Description :</label><br />
+    <textarea
+      id="description"
+      name="description"
+      rows="5"
+      cols="33"
+      placeholder="..."
+    ></textarea>
+  </div>
+  <div class="piece"></div>
+  <input type="file" name="image" id="image" />
+  <div class="button">
+    <button type="submit">Ajouter le projet</button>
+  </div>
+</form>

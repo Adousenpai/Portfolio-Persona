@@ -7,6 +7,7 @@ const mongoose = require("mongoose");
 const flash = require("connect-flash");
 const session = require("express-session");
 const passport = require("passport");
+const bodyParser = require("body-parser");
 
 // Passport config
 require("./config/passport")(passport);
@@ -15,7 +16,8 @@ require("./config/passport")(passport);
 dotenv.config();
 
 // BodyParser
-app.use(express.urlencoded({ extended: false }));
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true }));
 
 // Express session
 app.use(
@@ -26,7 +28,7 @@ app.use(
   })
 );
 
-// Passport Middleware
+// Passpor Middleware
 app.use(passport.initialize());
 app.use(passport.session());
 
@@ -47,8 +49,8 @@ app.listen(port, () => console.log(`Example app listening on port ${port} !`));
 // Link CSS
 app.use(express.static("public"));
 
-//Middleware
-app.use(express.json());
+// //Middleware
+// app.use(express.json());
 
 // EJS
 app.use(expressLayouts);
@@ -56,10 +58,9 @@ app.set("view engine", "ejs");
 
 // Routes
 app.use("/", require("./routes/index"));
+app.use("/admin", require("./routes/admin"));
 app.use("/users", require("./routes/register"));
 app.use("/users", require("./routes/login"));
-
-// app.use("/users", require("./routes/users"));
 
 // Connection to Mongo Db
 mongoose.connect(process.env.DB_CONNECT, { useNewUrlParser: true }, () => {

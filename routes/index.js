@@ -1,16 +1,14 @@
-const express = require("express");
 const router = require("express").Router();
-const { ensureAuthenticated } = require("../config/auth");
+const Project = require("../models/Project");
 
 router.get("/", (req, res) => {
-  res.render("welcome");
+  Project.find(function(err, schema) {
+    res.render("./welcome", { tutu: schema });
+  });
 });
 
-//Project Page
-router.get("/dashboard", ensureAuthenticated, (req, res) => {
-  res.render("dashboard", {
-    name: req.user.name
-  });
+router.get("/contact", (req, res) => {
+  res.render("contact");
 });
 
 module.exports = router;

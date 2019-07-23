@@ -1,12 +1,20 @@
-<div class="row mt-5">
-  <div class="col-md-6 m-auto">
-    <div class="card card-body text-center">
-      <h1><i class="fab fa-node-js fa-3x"></i></h1>
-      <p>Create an account or login</p>
-      <a href="/users/register" class="btn btn-primary btn-block mb-2"
-        >Register</a
-      >
-      <a href="/users/login" class="btn btn-secondary btn-block">Login</a>
-    </div>
+<header>
+  <nav>
+    <h1>Homepage</h1>
+    <ul class="nav-bar">
+      <li class="nav-list"><a href="/contact">Contact</a></li>
+    <a href="/users/login">Login</a><li class="nav-list"></li>
+    </ul>
+  </nav>
+</header>
+<section id="project-section">
+  <div class="container-project">
+      <% for(let i =0; i<tutu.length; i++){ %>
+      <div class="project">
+        <h2> <%= tutu[i].title %> </h2>
+        <p> <%= tutu[i].description %> </p>
+        <img src="/uploads/<%= tutu[i].image %>" class="project_img">
+     </div>
+  <% } %>
   </div>
-</div>
+</section>
