@@ -1,12 +1,16 @@
+<link rel="stylesheet" href="/css/bootstrap.min.css" />
+<div class="row mt-5">
+  <div class="col-md-6 m-auto">
+    <div class="card card-body">
 <h1>Contact</h1>
     <form action="/admin/contact-post" method="POST">
       <div>
         <label for="email">Email :</label>
-        <input type="email" id="email" name="email" />
+        <input type="email" id="email" name="email" class="form-control"/>
       </div>
       <div>
         <label for="title">Sujet :</label>
-          <input type="text" id="sujet" name="sujet" />
+          <input type="text" id="sujet" name="sujet" class="form-control" />
          <div class="description">
         <label for="message">Message :</label><br />
         <textarea
@@ -15,9 +19,13 @@
           rows="5"
           cols="33"
           placeholder="..."
+          class="form-control"
         ></textarea>
       </div>
       <div class="button">
-        <button type="submit">Send</button>
+        <button type="submit" class="btn btn-primary btn-block">Send</button>
       </div>
     </form>
+    </div>
+    </div>
+  </div>

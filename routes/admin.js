@@ -1,39 +1,38 @@
-const express = require("express");
-const router = require("express").Router();
-const { ensureAuthenticated } = require("../config/auth");
-const Project = require("../models/Project");
-const multer = require("multer");
-const path = require("path");
+const router = require('express').Router();
+const { ensureAuthenticated } = require('../config/auth');
+const Project = require('../models/Project');
+const multer = require('multer');
+const path = require('path');
 
 //Project Page
-router.get("/project", (req, res) => {
-  res.render("project", {
-    // name: req.user.name
+router.get('/project', ensureAuthenticated, (req, res) => {
+  Project.find(function(err, schema) {
+    res.render('project', { project: schema });
   });
 });
 
-// Set Storage engine
+// Configuration du Storage a image
 storage = multer.diskStorage({
-  destination: "./public/uploads",
+  destination: './public/uploads',
   filename: function(req, file, cb) {
     cb(
       null,
-      file.fieldname + "-" + Date.now() + path.extname(file.originalname)
+      file.fieldname + '-' + Date.now() + path.extname(file.originalname)
     );
   }
 });
 
-// Init upload
+// Télécharger l'image
 const upload = multer({
   storage: storage
-}).single("image");
+}).single('image');
 
-// Admin Handle
-router.post("/projectPost", function(req, res) {
+// Ajouter un projet
+router.post('/projectPost', function(req, res) {
   upload(req, res, err => {
     if (err) {
       console.log(err);
-      res.render("project", {
+      res.render('project', {
         msg: err
       });
     } else {
@@ -45,10 +44,56 @@ router.post("/projectPost", function(req, res) {
         if (err) {
           return res.json(err);
         } else {
-          res.redirect("/");
+          res.redirect('/admin/dashboard');
         }
       });
     }
+  });
+});
+
+// Dashboard
+router.get('/dashboard', ensureAuthenticated, (req, res) => {
+  Project.find(function(err, schema) {
+    res.render('dashboard', { project: schema });
+  });
+});
+
+//U Page de modification
+router.get('/update/:id', ensureAuthenticated, (req, res) => {
+  const id = req.params.id;
+  Project.findById(id, (err, project) => {
+    if (err) {
+      res.send(err);
+    }
+    res.render('MAJproject', { project: project });
+  });
+});
+
+// Modification de projet
+router.post('/update/:id', (req, res) => {
+  upload(req, res, err => {
+    const id = req.params.id;
+    Project.findById(id, (err, project) => {
+      project.title = req.body.title;
+      project.description = req.body.description;
+      project.prev = req.body.prev;
+      project.git = req.body.git;
+      project.image = req.file.filename;
+      project.save(err => {
+        if (err) {
+          res.send(err);
+        }
+        console.log(req.body);
+        res.redirect('/admin/dashboard');
+      });
+    });
+  });
+});
+
+// Supprimer un projet
+router.post('/delete', ensureAuthenticated, (req, res) => {
+  Project.deleteOne({ _id: req.body.id }).then(response => {
+    res.redirect('/admin/dashboard');
   });
 });
 

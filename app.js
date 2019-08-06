@@ -1,16 +1,16 @@
-const express = require("express");
+const express = require('express');
 const app = express();
-const expressLayouts = require("express-ejs-layouts");
+const expressLayouts = require('express-ejs-layouts');
 const port = 3000;
-const dotenv = require("dotenv");
-const mongoose = require("mongoose");
-const flash = require("connect-flash");
-const session = require("express-session");
-const passport = require("passport");
-const bodyParser = require("body-parser");
+const dotenv = require('dotenv');
+const mongoose = require('mongoose');
+const flash = require('connect-flash');
+const session = require('express-session');
+const passport = require('passport');
+const bodyParser = require('body-parser');
 
 // Passport config
-require("./config/passport")(passport);
+require('./config/passport')(passport);
 
 // Env config
 dotenv.config();
@@ -22,7 +22,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 // Express session
 app.use(
   session({
-    secret: "cat",
+    secret: 'cat',
     resave: true,
     saveUninitialized: true
   })
@@ -37,9 +37,9 @@ app.use(flash());
 
 // Global variable
 app.use((req, res, next) => {
-  res.locals.succes_msg = req.flash("succes_msg");
-  res.locals.error_msg = req.flash("error_msg");
-  res.locals.error = req.flash("error");
+  res.locals.succes_msg = req.flash('succes_msg');
+  res.locals.error_msg = req.flash('error_msg');
+  res.locals.error = req.flash('error');
 
   next();
 });
@@ -47,22 +47,23 @@ app.use((req, res, next) => {
 app.listen(port, () => console.log(`Example app listening on port ${port} !`));
 
 // Link CSS
-app.use(express.static("public"));
+app.use(express.static('public'));
 
 // //Middleware
 // app.use(express.json());
 
 // EJS
 app.use(expressLayouts);
-app.set("view engine", "ejs");
+app.set('view engine', 'ejs');
 
 // Routes
-app.use("/", require("./routes/index"));
-app.use("/admin", require("./routes/admin"));
-app.use("/users", require("./routes/register"));
-app.use("/users", require("./routes/login"));
+app.use('/', require('./routes/index'));
+app.use('/admin', require('./routes/admin'));
+app.use('/admin', require('./routes/contact'));
+app.use('/users', require('./routes/register'));
+app.use('/users', require('./routes/login'));
 
 // Connection to Mongo Db
 mongoose.connect(process.env.DB_CONNECT, { useNewUrlParser: true }, () => {
-  console.log("Connected to db :)");
+  console.log('Connected to db :)');
 });

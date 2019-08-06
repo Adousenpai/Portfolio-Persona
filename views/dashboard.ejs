@@ -1,0 +1,27 @@
+<link rel="stylesheet" href="/css/bootstrap.min.css" />
+<section id="project-section">
+    <h1>Dashboard</h1>
+    <a href="/admin/project" class="btn btn-primary btn-block">Add Project</a>
+    <a href="/users/logout" class="btn btn-primary btn-block">Logout</a>
+    <div class="container-project">
+        <% for(let i =0; i<project.length; i++){ %>
+        <div class="project">
+          <h2> <%= project[i].title %> </h2>
+          <p> <%= project[i].description %> </p>
+          <a href="<%= project[i].prev %>">Aperçu</a>
+          <p>Github :<a href="<%= project[i].git %>">Lien</a></p>
+          <img src="/uploads/<%= project[i].image %>" class="project_img">
+  
+          <form action="update/<%= project[i].id %>" method="GET">
+            <input type="hidden" name="id" value="<%= project[i]._id %>">
+            <input type="submit" value="update">
+        </form>
+
+          <form action="/admin/delete" method="POST">
+            <input type="hidden" name="id" value="<%= project[i]._id %>">
+            <input type="submit" value="delete">
+        </form>
+          </div>
+    <% } %>
+    </div>
+  </section>

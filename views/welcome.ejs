@@ -9,12 +9,14 @@
 </header>
 <section id="project-section">
   <div class="container-project">
-      <% for(let i =0; i<tutu.length; i++){ %>
+      <% for(let i =0; i<project.length; i++){ %>
       <div class="project">
-        <h2> <%= tutu[i].title %> </h2>
-        <p> <%= tutu[i].description %> </p>
-        <img src="/uploads/<%= tutu[i].image %>" class="project_img">
-     </div>
+        <h2> <%= project[i].title %> </h2>
+        <p> <%= project[i].description %> </p>
+        <a href="<%= project[i].prev %>">Aperçu</a>
+        <p>Github :<a href="<%= project[i].git %>">Lien</a></p>
+        <img src="/uploads/<%= project[i].image %>" class="project_img">
+        </div>
   <% } %>
   </div>
 </section>

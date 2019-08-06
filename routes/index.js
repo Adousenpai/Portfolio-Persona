@@ -1,14 +1,14 @@
-const router = require("express").Router();
-const Project = require("../models/Project");
+const router = require('express').Router();
+const Project = require('../models/Project');
 
-router.get("/", (req, res) => {
+router.get('/', (req, res) => {
   Project.find(function(err, schema) {
-    res.render("./welcome", { tutu: schema });
+    res.render('./welcome', { project: schema });
   });
 });
 
-router.get("/contact", (req, res) => {
-  res.render("contact");
+router.get('/contact', (req, res) => {
+  res.render('contact');
 });
 
 module.exports = router;

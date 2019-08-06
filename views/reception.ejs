@@ -1,0 +1,17 @@
+<header>
+    <nav>
+      <h1>Boite de reception</h1>
+    </nav>
+  </header>
+  <section id="project-section">
+    <div class="container-project">
+        <% for(let i =0; i<contact.length; i++){ %>
+        <div class="contact">
+          <h2> <%= contact[i].email %> </h2>
+          <p> <%= contact[i].sujet %> </p>
+          <p> <%= contact[i].message %> </p>
+          </div>
+    <% } %>
+    </div>
+  </section>
+  
