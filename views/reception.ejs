@@ -3,13 +3,17 @@
       <h1>Boite de reception</h1>
     </nav>
   </header>
-  <section id="project-section">
-    <div class="container-project">
+  <section id="contact-section">
+    <div class="container-contact">
         <% for(let i =0; i<contact.length; i++){ %>
         <div class="contact">
-          <h2> <%= contact[i].email %> </h2>
-          <p> <%= contact[i].sujet %> </p>
+          <h3> <%= contact[i].sujet %> </h3>
+          <p> <%= contact[i].email %> </p>
           <p> <%= contact[i].message %> </p>
+          <form action="/admin/deletemsg" method="POST">
+            <input type="hidden" name="id" value="<%= contact[i]._id %>">
+            <input type="submit" value="delete">
+        </form>
           </div>
     <% } %>
     </div>

@@ -59,7 +59,8 @@ app.set('view engine', 'ejs');
 // Routes
 app.use('/', require('./routes/index'));
 app.use('/admin', require('./routes/admin'));
-app.use('/admin', require('./routes/contact'));
+app.use('/', require('./routes/contact'));
+app.use('/admin', require('./routes/reception'));
 app.use('/users', require('./routes/register'));
 app.use('/users', require('./routes/login'));
 

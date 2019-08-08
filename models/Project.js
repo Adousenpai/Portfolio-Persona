@@ -10,11 +10,7 @@ const projetSchema = new mongoose.Schema({
   date: {
     type: Date,
     default: Date.now
-  },
-  Categorie: {
-    type: Schema.Types.ObjectId,
-    ref: 'Categorie'
   }
 });
-const Project = mongoose.model('Project', projetSchema);
-module.exports = Project;
+
+module.exports = mongoose.model('Project', projetSchema);
