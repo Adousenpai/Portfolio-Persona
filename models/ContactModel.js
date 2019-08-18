@@ -1,9 +1,22 @@
 const mongoose = require('mongoose');
 
 const contactSchema = new mongoose.Schema({
-  email: String,
-  sujet: String,
-  message: String,
+  name: {
+    type: String,
+    required: true
+  },
+  email: {
+    type: String,
+    required: true
+  },
+  sujet: {
+    type: String,
+    required: true
+  },
+  message: {
+    type: String,
+    required: true
+  },
   date: {
     type: Date,
     default: Date.now

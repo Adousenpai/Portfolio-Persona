@@ -4,6 +4,7 @@
     <a href="/admin/project" class="btn btn-primary btn-block">Add Project</a>
     <a href="/admin/reception" class="btn btn-primary btn-block">Messages</a>
     <a href="/users/logout" class="btn btn-primary btn-block">Logout</a>
+    <% include ./components/messages %>
     <div class="container-project">
         <% for(let i =0; i<project.length; i++){ %>
         <div class="project">

@@ -40,6 +40,8 @@ app.use((req, res, next) => {
   res.locals.succes_msg = req.flash('succes_msg');
   res.locals.error_msg = req.flash('error_msg');
   res.locals.error = req.flash('error');
+  res.locals.email = req.flash('email');
+  res.locals.update = req.flash('update');
 
   next();
 });
@@ -48,9 +50,6 @@ app.listen(port, () => console.log(`Example app listening on port ${port} !`));
 
 // Link CSS
 app.use(express.static('public'));
-
-// //Middleware
-// app.use(express.json());
 
 // EJS
 app.use(expressLayouts);

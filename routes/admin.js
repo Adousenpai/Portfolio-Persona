@@ -46,15 +46,6 @@ router.post('/projectPost', function(req, res) {
         } else {
           res.redirect('/admin/dashboard');
         }
-        // Filtre des projets
-        const Cat1 = new Categorie({
-          title: 'Javascript',
-          categorie: projetSchema._id // assign the _id from the person
-        });
-
-        Cat1.save(function(err) {
-          if (err) return handleError(err);
-        });
       });
     }
   });
@@ -92,7 +83,7 @@ router.post('/update/:id', (req, res) => {
         if (err) {
           res.send(err);
         }
-        console.log(req.body);
+        req.flash('update', 'Project updated');
         res.redirect('/admin/dashboard');
       });
     });

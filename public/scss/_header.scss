@@ -1,0 +1,56 @@
+.square {
+  margin-left: auto;
+  width: 75%;
+  height: 100%;
+  background-image: url('/images/Header-square.svg');
+  background-repeat: no-repeat;
+  background-position: right 0 top 0;
+  background-size: 100%;
+  position: relative;
+}
+
+.h1-square {
+  background-color: $white;
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  transform: translate(-50%, -10%);
+  -webkit-clip-path: polygon(0 0, 100% 9%, 95% 30%, 6% 20%);
+  clip-path: polygon(0 0, 100% 9%, 95% 28%, 6% 32%);
+  width: 50%;
+  height: 55%;
+  padding-top: 1.4rem;
+  //   padding-left: 2rem;
+
+  h1 {
+    text-align: center;
+    font-size: 5rem;
+  }
+}
+
+.char-header {
+  position: absolute;
+  width: 100%;
+  top: 50%;
+  left: 15%;
+  transform: translate(0, -50%);
+
+  #Morg-header {
+    width: 20%;
+    filter: drop-shadow(-15px 15px 0px black);
+  }
+
+  #Speak {
+    width: 50%;
+    position: absolute;
+    top: 18%;
+    left: 12%;
+  }
+  p {
+    color: white;
+    width: 30%;
+    position: absolute;
+    top: 35%;
+    left: 30%;
+  }
+}

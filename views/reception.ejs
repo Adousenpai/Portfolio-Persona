@@ -2,11 +2,13 @@
     <nav>
       <h1>Boite de reception</h1>
     </nav>
+    <a class="btn btn-primary btn-block" href="/admin/dashboard">Dashboard</a>
   </header>
   <section id="contact-section">
     <div class="container-contact">
         <% for(let i =0; i<contact.length; i++){ %>
         <div class="contact">
+          <h2> <%= contact[i].name %> </h2>
           <h3> <%= contact[i].sujet %> </h3>
           <p> <%= contact[i].email %> </p>
           <p> <%= contact[i].message %> </p>
