@@ -32,7 +32,7 @@
   position: absolute;
   width: 100%;
   top: 50%;
-  left: 15%;
+  left: 10%;
   transform: translate(0, -50%);
 
   #Morg-header {
@@ -41,9 +41,9 @@
   }
 
   #Speak {
-    width: 50%;
+    width: 60%;
     position: absolute;
-    top: 18%;
+    top: 10%;
     left: 12%;
   }
   p {
@@ -51,6 +51,7 @@
     width: 30%;
     position: absolute;
     top: 35%;
-    left: 30%;
+    left: 33%;
+    font-size: 1rem;
   }
 }
