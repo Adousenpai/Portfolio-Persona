@@ -6,3 +6,6 @@ $('.menu_toggle').on('click', function() {
 $('.content').on('click', function() {
   $page.removeClass('shazam');
 });
+$('.menu_items').on('click', function() {
+  $page.removeClass('shazam');
+});

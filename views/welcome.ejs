@@ -1,4 +1,5 @@
-<header>
+<link rel="stylesheet" href="/css/style.css" />
+<header id="Head">
   <div class="page">
     <span class="menu_toggle">
       <i class="menu_open fa fa-bars fa-lg"></i>
@@ -6,8 +7,8 @@
     </span>
     <div class="menu-after"></div>
     <ul class="menu_items">
-      <li><i class="fas fa-trophy fa-2x"></i><a href="#">Projet</a></li>
-      <li><i class="fas fa-address-book  fa-2x"></i><a href="/users/Contact">Contact</a></li>
+      <li><i class="fas fa-trophy fa-2x"></i><a href="#projet">Projet</a></li>
+      <li><i class="fas fa-address-book  fa-2x"></i><a href="/Contact">Contact</a></li>
       <li><i class="fas fa-users-cog  fa-2x"></i><a href="/users/login">Login</a></li>
     </ul>
     <main class="content">
@@ -15,25 +16,38 @@
       <div class="h1-square">
         <h1>Portfolio</h1>
       </div>
+      <div class="red-square"></div>
       </div>
-      <div class="char-header">
-          <img src="/images/MorgHeader.gif" alt="morgana" id="Morg-header">
-          <img src="/images/Header-bulle.svg" alt="speak" id="Speak">
+      <div class="char-header" >
+          <img src="/images/MorgHeader.gif" alt="morgana" id="Morg-header" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="500" data-aos-anchor="#Head">
+          <img src="/images/Header-bulle.svg" alt="speak" id="Speak" data-aos="fade-right" data-aos-duration="200" data-aos-delay="1800" data-aos-anchor="#Head">
           <p>Bonjour ! Je m'appel Maxime, je suis développeur Javascript Fullstack. Voici mon portfolio !</p>
         </div>
       </main>
+      </div>
 </header>
 <section id="project-section">
-  <div class="container-project">
+  <div class="container-project" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="500" data-aos-anchor="#projet">
+      <div class="h2-square">
+        <h2 id="projet">Projets</h2>
+      </div>
+      <div class="h2-square2">
+        </div>
       <% for(let i =0; i<project.length; i++){ %>
-      <div class="project">
-        <h2> <%= project[i].title %> </h2>
-        <p> <%= project[i].description %> </p>
-        <a href="<%= project[i].prev %>">Aperçu</a>
-        <p>Github :<a href="<%= project[i].git %>">Lien</a></p>
+        <div class="project">
+          <div class="project-text">
+            <h2> <%= project[i].title %> </h2>
+            <p> <%= project[i].description %> </p>
+            <a href="<%= project[i].prev %>" target="_blank" >Aperçu <i class="fas fa-external-link-alt"></i></a>
+            <a href="<%= project[i].git %>" target="_blank">Github <i class="fas fa-external-link-alt"></i></a>
+          </div>
         <img src="/uploads/<%= project[i].image %>" class="project_img">
         </div>
-  <% } %>
-  </div>
+      <% } %>
+      <i class="fas fa-chevron-left"id="left"></i>
+      <i class="fas fa-chevron-right"id="right"></i>
+    </div>
+ 
 </section>
+
 
