@@ -14,32 +14,36 @@
     <main class="content">
       <div class="square">
       <div class="h1-square">
-        <h1>Portfolio</h1>
+        <h1>Portf<span class="spe">o</span>lio</h1>
       </div>
       <div class="red-square"></div>
       </div>
       <div class="char-header" >
           <img src="/images/MorgHeader.gif" alt="morgana" id="Morg-header" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="500" data-aos-anchor="#Head">
           <img src="/images/Header-bulle.svg" alt="speak" id="Speak" data-aos="fade-right" data-aos-duration="200" data-aos-delay="1800" data-aos-anchor="#Head">
-          <p>Bonjour ! Je m'appel Maxime, je suis développeur Javascript Fullstack. Voici mon portfolio !</p>
+          <p id="texte"></p>
         </div>
       </main>
       </div>
 </header>
 <section id="project-section">
-  <div class="container-project" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="500" data-aos-anchor="#projet">
-      <div class="h2-square">
-        <h2 id="projet">Projets</h2>
+  <div id="projet" class="container-project" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="500" data-aos-anchor="#projet">
+    <div class="h2-css">
+    <div class="h2-square">
+        <h2 >Pr<span class="spe-h2">o</span>jets</h2>
       </div>
       <div class="h2-square2">
         </div>
+      </div> 
       <% for(let i =0; i<project.length; i++){ %>
         <div class="project">
           <div class="project-text">
             <h2> <%= project[i].title %> </h2>
-            <p> <%= project[i].description %> </p>
-            <a href="<%= project[i].prev %>" target="_blank" >Aperçu <i class="fas fa-external-link-alt"></i></a>
-            <a href="<%= project[i].git %>" target="_blank">Github <i class="fas fa-external-link-alt"></i></a>
+            <p><%= project[i].description %>br</p>
+            <div class="btn-link">
+            <a id="btn1" href="<%= project[i].prev %>" target="_blank" >Aperçu <i class="fas fa-external-link-alt"></i></a>
+            <a  id="btn2" href="<%= project[i].git %>" target="_blank">Github<i class="fas fa-external-link-alt"></i></a>
+          </div>
           </div>
         <img src="/uploads/<%= project[i].image %>" class="project_img">
         </div>
@@ -47,7 +51,51 @@
       <i class="fas fa-chevron-left"id="left"></i>
       <i class="fas fa-chevron-right"id="right"></i>
     </div>
- 
-</section>
+ </section>
+   <div class="inter-section" id="foot">
+      
+   </div>
+ <footer>
+   <div class="char-footer">
+      <img id="morg-footer" src="/images/Morgfooter.gif" alt="morgana" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="500" data-aos-anchor="#foot">
+      <div class="footer-speak" >
+      <img id="speak-footer" src="/images/Header-bulle.svg" alt="speaker"data-aos="fade-right" data-aos-duration="300" data-aos-delay="1400" data-aos-anchor="#foot">
+      <div class="footer-text"data-aos="fade-right" data-aos-duration="300" data-aos-delay="1400" data-aos-anchor="#foot">
+      <h2>Vous pouvez me suivre juste ici !</h2>
+      <ul class="reseau">
+          <li>
+            <a href="https://www.facebook.com/" target="_blank">
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+              <span class="fab fa-facebook-f"></span>
+            </a>
+          </li>
 
+          <li>
+            <a href="https://twitter.com" target="_blank">
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+              <span class="fab fa-twitter"></span>
+            </a>
+          </li>
+
+          <li>
+            <a href="https://www.instagram.com/" target="_blank">
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+              <span class="fab fa-instagram"></span>
+            </a>
+          </li>
+        </ul>
+    </div>
+    </div>
+  </div>
+   <div class="square-background"></div>
+ </footer>
 

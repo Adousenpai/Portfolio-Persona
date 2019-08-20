@@ -2,6 +2,15 @@ const right = document.querySelector('#right');
 const left = document.querySelector('#left');
 const project = document.getElementsByClassName('project');
 let i = 0;
+let b = -1;
+const backgrounds = [
+  `rgb(255, 175, 2)`,
+  `rgb(0, 165, 8)`,
+  `rgb(0, 206, 189)`,
+  `rgb(36, 66, 238)`,
+  `rgb(105, 0, 204)`,
+  `rgb(209, 0, 199)`
+];
 
 function Slider() {
   project[i].classList.add('active');
@@ -9,6 +18,8 @@ function Slider() {
 
 right.addEventListener('click', () => {
   i++;
+  b++;
+  project[i].style.backgroundColor = backgrounds[b];
   project[i].classList.add('active');
   project[i - 1].classList.remove('active');
   left.style.opacity = 1;
@@ -21,6 +32,8 @@ right.addEventListener('click', () => {
 
 left.addEventListener('click', () => {
   i--;
+  b--;
+  project[i].style.backgroundColor = backgrounds[b];
   project[i].classList.add('active');
   project[i + 1].classList.remove('active');
   right.style.pointerEvents = 'visible';
