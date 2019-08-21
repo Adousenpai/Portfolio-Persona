@@ -1,4 +1,4 @@
-#Contact {
+.Contact {
   display: flex;
   height: 100vh;
   flex-direction: row-reverse;
@@ -22,8 +22,7 @@
   left: 20%;
   transform: translate(0, -50%);
   text-align: center;
-  padding: 3.5rem 5rem 6.5rem 3rem;
-
+  padding: 3.2rem 5rem 6rem 3rem;
   h2 {
     color: white;
     text-transform: uppercase;
@@ -36,7 +35,6 @@
   input[type='text'],
   input[type='email'],
   input[type='password'] {
-    border-radius: 0.5em;
     border: rgb(161, 161, 161) 1px solid;
     text-align: center;
     background-color: lightgrey;
@@ -44,14 +42,14 @@
     padding: 0 2rem;
     margin-bottom: 1rem;
   }
+
   textarea {
-    border-radius: 0.5em;
     border: rgb(161, 161, 161) 1px solid;
     text-align: center;
     background-color: lightgrey;
-    height: 7rem;
+    height: 5.5rem;
     padding: 1rem 2rem;
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
   }
 }
 
@@ -88,7 +86,7 @@
 
 .contact-btn1 {
   text-decoration: none;
-  color: black;
+  color: white;
   font-weight: 700;
   padding: 0.5rem;
   border: none;
@@ -118,4 +116,38 @@
   &:hover {
     background-color: rgb(44, 180, 96);
   }
+}
+
+.upload-btn-wrapper {
+  position: relative;
+  overflow: hidden;
+  display: block;
+  left: 50%;
+  transform: translate(-50%, 0);
+  width: 50%;
+  &:hover .btn {
+    background-color: rgb(59, 59, 59);
+  }
+}
+
+.btn {
+  border: none;
+  color: $white;
+  background-color: grey;
+  padding: 8px 20px;
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  transition: all 0.5s ease;
+  i {
+    margin-right: 0.8rem;
+  }
+}
+
+.upload-btn-wrapper input[type='file'] {
+  font-size: 100px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 0;
 }

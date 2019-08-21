@@ -581,7 +581,7 @@ footer {
   z-index: 8;
   transform: rotate(20deg); }
 
-#Contact {
+.Contact {
   display: flex;
   height: 100vh;
   flex-direction: row-reverse;
@@ -603,7 +603,7 @@ footer {
   left: 20%;
   transform: translate(0, -50%);
   text-align: center;
-  padding: 3.5rem 5rem 6.5rem 3rem; }
+  padding: 3.2rem 5rem 6rem 3rem; }
   .contact-form h2 {
     color: white;
     text-transform: uppercase;
@@ -614,7 +614,6 @@ footer {
   .contact-form input[type='text'],
   .contact-form input[type='email'],
   .contact-form input[type='password'] {
-    border-radius: 0.5em;
     border: #a1a1a1 1px solid;
     text-align: center;
     background-color: lightgrey;
@@ -622,13 +621,12 @@ footer {
     padding: 0 2rem;
     margin-bottom: 1rem; }
   .contact-form textarea {
-    border-radius: 0.5em;
     border: #a1a1a1 1px solid;
     text-align: center;
     background-color: lightgrey;
-    height: 7rem;
+    height: 5.5rem;
     padding: 1rem 2rem;
-    margin-bottom: 2rem; }
+    margin-bottom: 1rem; }
 
 .contact-square {
   -webkit-clip-path: polygon(0 0, 100% 9%, 95% 70%, 6% 100%);
@@ -659,7 +657,7 @@ footer {
 
 .contact-btn1 {
   text-decoration: none;
-  color: black;
+  color: white;
   font-weight: 700;
   padding: 0.5rem;
   border: none;
@@ -687,23 +685,42 @@ footer {
   .contact-btn2:hover {
     background-color: #2cb460; }
 
-#Login {
-  display: flex;
-  height: 100vh;
-  flex-direction: row-reverse;
-  position: relative; }
-  #Login h2 {
-    color: black;
-    padding-right: 3rem;
-    margin-bottom: 1em; }
+.upload-btn-wrapper {
+  position: relative;
+  overflow: hidden;
+  display: block;
+  left: 50%;
+  transform: translate(-50%, 0);
+  width: 50%; }
+  .upload-btn-wrapper:hover .btn {
+    background-color: #3b3b3b; }
+
+.btn {
+  border: none;
+  color: #ffffff;
+  background-color: grey;
+  padding: 8px 20px;
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  transition: all 0.5s ease; }
+  .btn i {
+    margin-right: 0.8rem; }
+
+.upload-btn-wrapper input[type='file'] {
+  font-size: 100px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 0; }
 
 .login-form {
   -webkit-clip-path: polygon(0 6%, 100% 0, 100% 100%, 0 84%);
   clip-path: polygon(2% 6%, 91% 0, 99% 100%, 2% 90%);
   position: absolute;
   background-color: white;
-  top: 50%;
-  left: 22%;
+  top: 49%;
+  left: 23%;
   background-color: #000000;
   transform: rotate(-10deg) translate(0, -50%);
   height: 65%;
