@@ -116,3 +116,30 @@ footer {
     background-color: #e4405f;
   }
 }
+
+.jump-top {
+  z-index: 9;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  display: block;
+  width: 90px;
+  height: 90px;
+  background-color: $white;
+  -webkit-clip-path: polygon(44% 3%, 100% 53%, 100% 100%, 0 100%);
+  clip-path: polygon(20% 0%, 100% 30%, 100% 100%, 0 100%);
+  display: flex;
+  padding-left: 1rem;
+  padding-top: 0.5rem;
+  align-items: center;
+  h2 {
+    font-size: 1.3rem;
+    color: black;
+  }
+}
+
+.jump-top:nth-child(2) {
+  background-color: black;
+  z-index: 8;
+  transform: rotate(20deg);
+}
