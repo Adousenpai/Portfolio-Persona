@@ -55,7 +55,7 @@
 
 .contact-square {
   -webkit-clip-path: polygon(0 0, 100% 9%, 95% 70%, 6% 100%);
-  clip-path: polygon(0 0, 100% 9%, 95% 70%, 6% 100%);
+  clip-path: polygon(0 0, 100% 9%, 95% 70%, 9% 100%);
   width: 400px;
   height: 65px;
   z-index: 5;
@@ -66,7 +66,7 @@
 .contact-form:nth-child(2) {
   background-color: $black;
   transform: rotate(-10deg) translate(0, -50%);
-  height: 95%;
+  height: 600px;
   width: 600px;
   left: 25%;
 }

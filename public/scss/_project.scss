@@ -1,10 +1,14 @@
-#project-section {
+.project-section {
   -webkit-clip-path: polygon(0 12%, 100% 0, 100% 100%, 0 100%);
   clip-path: polygon(0 12%, 100% 0, 100% 100%, 0 100%);
   background-color: $black;
   position: relative;
-  padding-top: 8rem;
-  height: 115vh;
+  padding-top: 4rem;
+  height: 90vh;
+
+  &:nth-child(2) {
+    clip-path: none;
+  }
 }
 
 .container-project {
@@ -19,6 +23,7 @@
   width: 95%;
   height: 100%;
   margin: auto;
+
   .project {
     padding: 8% 10% 0% 10%;
     border-radius: 3px;
@@ -107,7 +112,7 @@
   }
 
   .project_img {
-    height: 70%;
+    height: 80%;
     border: 2px solid black;
     cursor: pointer;
     box-shadow: 25px -15px 2px rgba(0, 0, 0, 0.247);

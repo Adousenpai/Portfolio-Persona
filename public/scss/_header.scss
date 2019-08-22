@@ -45,7 +45,7 @@
 .char-header {
   position: absolute;
   width: 100%;
-  top: 50%;
+  top: 40%;
   left: 10%;
   transform: translate(0, -50%);
 
@@ -55,17 +55,17 @@
   }
 
   #Speak {
-    width: 60%;
+    width: 55%;
     position: absolute;
-    top: 10%;
-    left: 12%;
+    top: 17%;
+    left: 15%;
   }
   p {
     color: white;
     width: 30%;
     position: absolute;
     top: 45%;
-    left: 33%;
+    left: 35%;
     font-size: 1.2rem;
   }
 }

@@ -1,0 +1,86 @@
+.dashboard-section {
+}
+
+.contact-square {
+  margin: auto;
+  h2 {
+    color: white;
+    text-align: center;
+    text-transform: uppercase;
+    vertical-align: center;
+    font-size: 2.5rem;
+  }
+}
+
+.triangle-dash {
+  width: 100vw;
+  height: 12vh;
+  background-color: $black;
+  z-index: 5;
+  // -webkit-clip-path: polygon(0 0, 0% 100%, 100% 100%);
+  // clip-path: polygon(0 0, 0% 100%, 60% 100%);
+  flex-direction: row;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 1.5rem;
+  margin-bottom: 2rem;
+
+  ul {
+    display: flex;
+  }
+
+  .list-dash {
+    cursor: pointer;
+    -webkit-clip-path: polygon(17% 25%, 79% 0, 100% 100%, 0 100%);
+    clip-path: polygon(17% 25%, 79% 0, 100% 100%, 0 100%);
+    padding: 10px 15px 0 10px;
+    display: flex;
+    width: 230px;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    height: 55px;
+    z-index: 10;
+    margin-left: 1rem;
+    margin-bottom: 30px;
+    transition: all 0.4s ease;
+    i {
+      margin-right: 0.5rem;
+    }
+
+    &:hover:nth-child(1) {
+      background-color: rgb(32, 179, 105);
+    }
+    &:hover:nth-child(2) {
+      background-color: rgb(50, 162, 196);
+    }
+    &:hover:nth-child(3) {
+      background-color: $red;
+    }
+
+    &:nth-child(2) {
+      -webkit-clip-path: polygon(17% 25%, 79% 0, 100% 100%, 0 100%);
+      clip-path: polygon(17% 0%, 79% 0, 100% 100%, 0 100%);
+    }
+    &:nth-child(3) {
+      -webkit-clip-path: polygon(17% 25%, 79% 0, 100% 100%, 0 100%);
+      clip-path: polygon(17% 0%, 79% 25%, 100% 100%, 0 100%);
+    }
+    a {
+      text-decoration: none;
+      color: black;
+      font-weight: 700;
+      font-size: 1.2rem;
+    }
+  }
+
+  .list-dash:hover a {
+    color: white;
+  }
+}
+
+.project-dash {
+  top: 0;
+  left: 0;
+}

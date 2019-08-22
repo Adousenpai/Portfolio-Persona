@@ -1,13 +1,20 @@
-<link rel="stylesheet" href="/css/bootstrap.min.css" />
-<section id="project-section">
-    <h1>Dashboard</h1>
-    <a href="/admin/project" class="btn btn-primary btn-block"><i class="fas fa-plus-circle"></i>Add Project</a>
-    <a href="/" class="btn btn-primary btn-block"> <i class="fas fa-home"></i>Accueil</a>
-    <a href="/users/logout" class="btn btn-primary btn-block"><i class="fas fa-sign-out-alt"></i>Logout</a>
+<link rel="stylesheet" href="/css/style.css" />
+<div class="triangle-dash">
+    <ul>
+      <li class="list-dash"><a href="/admin/project"><i class="fas fa-plus-circle"></i>Ajouter</a></li>
+      <li class="list-dash"><a href="/"> <i class="fas fa-home"></i>Accueil</a></li>
+      <li class="list-dash"><a href="/users/logout"><i class="fas fa-sign-out-alt"></i>Deconnexion</a></li>
+    </ul></div>
+<section id="dashboard-section">
+  
+    <div class="contact-square">
+    <h2>D<span class="spe-h2">a</span>shb<span class="spe-h2">o</span>ard</h2>
+  </div>
     <% include ./components/messages %>
-    <div class="container-project">
+    <div class="project-section-dash">
+    <div class="container-project-dash">
         <% for(let i =0; i<project.length; i++){ %>
-        <div class="project">
+        <div class="project-dash">
           <h2> <%= project[i].title %> </h2>
           <p> <%= project[i].description %> </p>
           <a href="<%= project[i].prev %>">Aperçu</a>
@@ -26,4 +33,6 @@
           </div>
     <% } %>
     </div>
+  </div>
+    
   </section>

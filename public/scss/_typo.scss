@@ -35,12 +35,12 @@
   -webkit-clip-path: polygon(0 0, 100% 9%, 95% 70%, 6% 100%);
   clip-path: polygon(0 0, 100% 9%, 95% 70%, 6% 100%);
   width: 400px;
-  height: 70px;
+  height: 60px;
   z-index: 5;
   h2 {
     // font-family: 'Dharma';
     text-align: center;
-    font-size: 2.5rem;
+    font-size: 2.2rem;
   }
   &:before {
     content: '';
@@ -67,9 +67,9 @@
   -webkit-clip-path: polygon(0 0, 100% 9%, 95% 30%, 6% 20%);
   clip-path: polygon(0 0, 100% 9%, 95% 70%, 6% 100%);
   width: 410px;
-  height: 72px;
+  height: 62px;
   z-index: 4;
   position: absolute;
-  top: 4%;
+  top: 7%;
   left: 51%;
 }
