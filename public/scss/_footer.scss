@@ -8,7 +8,7 @@
 
 footer {
   position: relative;
-  height: 25vh;
+  height: auto;
 }
 
 .square-background {
@@ -29,8 +29,28 @@ footer {
   left: 50%;
   top: 25%;
   z-index: 3;
-  h2 {
+  .char-footer {
+    width: 30%;
+    display: flex;
+    justify-content: center;
+
+    img {
+      width: 50%;
+    }
+  }
+  p {
     color: white;
+    font-size: 1.2rem;
+  }
+  i {
+    font-size: 3rem;
+    color: white;
+    padding-bottom: 1.5rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    &:hover {
+      color: rgb(255, 193, 79);
+    }
   }
 }
 
@@ -42,6 +62,7 @@ footer {
   list-style: none;
   align-items: flex-end;
   height: 15vh;
+  margin-bottom: 2rem;
   span {
     position: absolute;
     top: 0;

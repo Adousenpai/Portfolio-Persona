@@ -1,0 +1,69 @@
+<link rel="stylesheet" href="/css/style.css" />
+<section class="Contact">
+  <div class="black-background"></div>
+  <div class="contact-form"></div>
+
+  <form
+    class="contact-form"
+    action="/admin/update/<%= project.id %>"
+    method="POST"
+    enctype="multipart/form-data"
+  >
+    <div class="contact-square">
+      <h2 class="">M<span class="spe-h2">o</span>difier</h2>
+    </div>
+    <div class="label-form">
+      <label for="title">Titre</label>
+      <input
+        type="text"
+        name="title"
+        id="title"
+        class="form-control"
+        value="<%= project.title %>"
+      />
+    </div>
+    <div class="label-form">
+      <label for="paragraphe">Description</label>
+      <textarea
+        type="textarea"
+        name="description"
+        id="description"
+        class="form-control"
+      >
+<%= project.description %></textarea
+      >
+    </div>
+    <div class="label-form">
+      <label for="prev">Git Page</label>
+      <input
+        type="text"
+        id="prev"
+        name="prev"
+        class="form-control"
+        value="<%= project.prev %>"
+      />
+    </div>
+    <div class="label-form" label-form>
+      <label for="git">Github</label>
+      <input
+        type="text"
+        id="git"
+        name="git"
+        class="form-control"
+        value="<%= project.git %>"
+      />
+    </div>
+
+    <div class="upload-btn-wrapper">
+      <button class="btn"><i class="fas fa-paperclip"></i>Upload</button>
+      <input type="file" name="image" id="image" />
+    </div>
+
+    <div class="contact-btn">
+      <a class="contact-btn1" href="/admin/dashboard">Annuler</a>
+      <button type="submit" class="contact-btn2">
+        Update
+      </button>
+    </div>
+  </form>
+</section>

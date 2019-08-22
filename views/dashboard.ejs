@@ -15,21 +15,26 @@
     <div class="container-project-dash">
         <% for(let i =0; i<project.length; i++){ %>
         <div class="project-dash">
+          <div class="project-dash-text">
           <h2> <%= project[i].title %> </h2>
-          <p> <%= project[i].description %> </p>
           <a href="<%= project[i].prev %>">Aperçu</a>
-          <p>Github :<a href="<%= project[i].git %>">Lien</a></p>
-          <img src="/uploads/<%= project[i].image %>" class="project_img">
-  
+          <a href="<%= project[i].git %>">Github</a>
+          <p> <%= project[i].description %> </p>
+        </div>
+        <div class="btn-dash">
           <form action="update/<%= project[i].id %>" method="GET">
             <input type="hidden" name="id" value="<%= project[i]._id %>">
-            <input type="submit" value="update">
+            <input class="btn-upt" type="submit" value="update">
         </form>
 
           <form action="/admin/delete" method="POST">
             <input type="hidden" name="id" value="<%= project[i]._id %>">
-            <input type="submit" value="delete">
+            <input class="btn-del" type="submit" value="delete">
         </form>
+      </div>
+          <img src="/uploads/<%= project[i].image %>" class="project_img">
+  
+         
           </div>
     <% } %>
     </div>
