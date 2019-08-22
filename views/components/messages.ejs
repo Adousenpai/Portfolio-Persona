@@ -1,48 +1,56 @@
 <% if(typeof errors!= 'undefined') { %> <% errors.forEach(function(error) { %>
-<div class="alert alert-warning alert-dismissible fade show" role="alert">
+<div class="warning msg" role="alert">
   <%= error.msg %>
   <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-    <span aria-hidden="true">&times;</span>
+    <i class="fas fa-times"></i>
   </button>
 </div>
 
 <% }); %> <% } %> <% if(succes_msg != '') { %>
-<div class="alert alert-success alert-dismissible fade show" role="alert">
+<div class="success msg" role="alert">
   <%= succes_msg %>
   <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-    <span aria-hidden="true">&times;</span>
+    <i class="fas fa-times"></i>
   </button>
 </div>
 
 <% } %> <% if(error_msg != '') { %>
-<div class="alert alert-danger alert-dismissible fade show" role="alert">
+<div class="danger msg" role="alert">
   <%= error_msg %>
   <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-    <span aria-hidden="true">&times;</span>
+    <i class="fas fa-times"></i>
   </button>
 </div>
 
 <% } %> <% if(error != '') { %>
-<div class="alert alert-danger alert-dismissible fade show" role="alert">
+<div class="danger msg" role="alert">
   <%= error %>
   <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-    <span aria-hidden="true">&times;</span>
+    <i class="fas fa-times"></i>
   </button>
 </div>
 
 <% } %> <% if(email != '') { %>
-<div class="alert alert-success alert-dismissible fade show" role="alert">
+<div class="success msg" role="alert">
   <%= email %>
   <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-    <span aria-hidden="true">&times;</span>
+    <i class="fas fa-times"></i>
   </button>
 </div>
 
 <% } %> <% if(update != '') { %>
-<div class="alert alert-success alert-dismissible fade show" role="alert">
+<div class="success2 msg" role="alert">
   <%= update %>
   <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-    <span aria-hidden="true">&times;</span>
+    <i class="fas fa-times"></i>
+  </button>
+</div>
+
+<% } %> <% if(del != '') { %>
+<div class="success2 msg" role="alert">
+  <%= del %>
+  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+    <i class="fas fa-times"></i>
   </button>
 </div>
 

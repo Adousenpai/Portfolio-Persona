@@ -1,14 +1,14 @@
 <link rel="stylesheet" href="/css/style.css" />
 <div class="triangle-dash">
     <ul>
-      <li class="list-dash"><a href="/admin/project"><i class="fas fa-plus-circle"></i>Ajouter</a></li>
-      <li class="list-dash"><a href="/"> <i class="fas fa-home"></i>Accueil</a></li>
-      <li class="list-dash"><a href="/users/logout"><i class="fas fa-sign-out-alt"></i>Deconnexion</a></li>
+      <li class="list-dash"><a href="/admin/project"><i class="fas fa-plus-circle"></i>Add</a></li>
+      <li class="list-dash"><a href="/"> <i class="fas fa-home"></i>Home</a></li>
+      <li class="list-dash"><a href="/users/logout"><i class="fas fa-sign-out-alt"></i>Sign out</a></li>
     </ul></div>
 <section id="dashboard-section">
   
     <div class="contact-square">
-    <h2>D<span class="spe-h2">a</span>shb<span class="spe-h2">o</span>ard</h2>
+    <h2>D<span class="spe-h2">a</span>sh<span class="spe-h2">B</span>oard</h2>
   </div>
     <% include ./components/messages %>
     <div class="project-section-dash">
@@ -24,12 +24,12 @@
         <div class="btn-dash">
           <form action="update/<%= project[i].id %>" method="GET">
             <input type="hidden" name="id" value="<%= project[i]._id %>">
-            <input class="btn-upt" type="submit" value="update">
+            <input class="btn-upt" type="submit" value="Update">
         </form>
 
           <form action="/admin/delete" method="POST">
             <input type="hidden" name="id" value="<%= project[i]._id %>">
-            <input class="btn-del" type="submit" value="delete">
+            <input class="btn-del" type="submit" value="Delete">
         </form>
       </div>
           <img src="/uploads/<%= project[i].image %>" class="project_img">
@@ -41,3 +41,14 @@
   </div>
     
   </section>
+
+  <div id="loader-wrapper">
+    <div class="wrap">
+     <div class="loading">
+       <div class="bounceball"></div>
+       <div class="text">NOW LOADING</div>
+     </div>
+   </div>
+   </div>
+   
+   <script src="/js/loading.js"></script>

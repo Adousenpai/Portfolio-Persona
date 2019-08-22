@@ -1,0 +1,46 @@
+.warning {
+  background-color: rgb(255, 196, 87);
+  color: white;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.success {
+  background-color: rgb(24, 199, 83);
+  color: white;
+  padding: 5px;
+  border-radius: 5px;
+}
+.success2 {
+  margin: auto;
+  text-align: center;
+  padding: 5px;
+  border-radius: 5px;
+  width: 40%;
+  background-color: rgb(44, 180, 96);
+  color: white;
+}
+
+.danger {
+  background-color: rgb(255, 58, 58);
+  color: white;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.close {
+  background-color: transparent;
+  border: none;
+  float: right;
+  margin-right: 5px;
+  padding-top: 3px;
+  height: 100%;
+  cursor: pointer;
+  i {
+    color: white;
+  }
+}
+
+.close:focus {
+  outline: none;
+}

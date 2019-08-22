@@ -19,6 +19,9 @@ function Slider() {
 right.addEventListener('click', () => {
   i++;
   b++;
+  if (b === backgrounds.length) {
+    b = -1;
+  }
   project[i].style.backgroundColor = backgrounds[b];
   project[i].classList.add('active');
   project[i - 1].classList.remove('active');

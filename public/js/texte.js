@@ -1,6 +1,7 @@
 let x = 0,
   text;
-text = "Bonjour je m'appel Maxime. Bienvenue sur mon portfolio !";
+text =
+  "Bonjour je m'appel Maxime, je suis développeur web ! Bienvenue sur mon portfolio !";
 
 function typing() {
   if (x < text.length) {

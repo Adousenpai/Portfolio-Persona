@@ -35,9 +35,13 @@ router.post('/projectPost', function(req, res) {
       res.render('project', {
         msg: err
       });
+    }
+    if (req.file === undefined) {
+      const projetSchema = new Project(req.body);
+      projetSchema.save((err, Project) => {
+        res.redirect('/admin/dashboard');
+      });
     } else {
-      console.log(req.file);
-      console.log(req.body);
       const projetSchema = new Project(req.body);
       projetSchema.image = req.file.filename;
       projetSchema.save((err, Project) => {
@@ -73,26 +77,43 @@ router.get('/update/:id', ensureAuthenticated, (req, res) => {
 router.post('/update/:id', (req, res) => {
   upload(req, res, err => {
     const id = req.params.id;
-    Project.findById(id, (err, project) => {
-      project.title = req.body.title;
-      project.description = req.body.description;
-      project.prev = req.body.prev;
-      project.git = req.body.git;
-      project.image = req.file.filename;
-      project.save(err => {
-        if (err) {
-          res.send(err);
-        }
-        req.flash('update', 'Project updated');
-        res.redirect('/admin/dashboard');
+    if (req.file === undefined) {
+      Project.findById(id, (err, project) => {
+        project.title = req.body.title;
+        project.description = req.body.description;
+        project.prev = req.body.prev;
+        project.git = req.body.git;
+        project.save(err => {
+          if (err) {
+            res.send(err);
+          }
+          req.flash('update', 'Project updated');
+          res.redirect('/admin/dashboard');
+        });
       });
-    });
+    } else {
+      Project.findById(id, (err, project) => {
+        project.title = req.body.title;
+        project.description = req.body.description;
+        project.prev = req.body.prev;
+        project.git = req.body.git;
+        project.image = req.file.filename;
+        project.save(err => {
+          if (err) {
+            res.send(err);
+          }
+          req.flash('update', 'Project successfully updated !');
+          res.redirect('/admin/dashboard');
+        });
+      });
+    }
   });
 });
 
 // Supprimer un projet
 router.post('/delete', ensureAuthenticated, (req, res) => {
   Project.deleteOne({ _id: req.body.id }).then(response => {
+    req.flash('del', 'Project successfully deleted!');
     res.redirect('/admin/dashboard');
   });
 });

@@ -41,8 +41,8 @@ app.use((req, res, next) => {
   res.locals.error_msg = req.flash('error_msg');
   res.locals.error = req.flash('error');
   res.locals.email = req.flash('email');
+  res.locals.del = req.flash('del');
   res.locals.update = req.flash('update');
-
   next();
 });
 // Serveur
