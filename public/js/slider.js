@@ -17,6 +17,7 @@ function Slider() {
 }
 
 right.addEventListener('click', () => {
+  console.log(project);
   i++;
   b++;
   if (b === backgrounds.length) {

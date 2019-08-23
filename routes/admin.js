@@ -35,12 +35,6 @@ router.post('/projectPost', function(req, res) {
       res.render('project', {
         msg: err
       });
-    }
-    if (req.file === undefined) {
-      const projetSchema = new Project(req.body);
-      projetSchema.save((err, Project) => {
-        res.redirect('/admin/dashboard');
-      });
     } else {
       const projetSchema = new Project(req.body);
       projetSchema.image = req.file.filename;
