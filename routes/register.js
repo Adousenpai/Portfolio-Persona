@@ -8,7 +8,7 @@ const passport = require("passport");
 //   res.render("register");
 // });
 
-// Register Handle ///////////////////////////////////////////////////////////////////////
+// Register Handle ///////////////////////////////////////////
 router.post("/register", (req, res) => {
   console.log(req.body);
   const { name, email, password, password2 } = req.body;
