@@ -299,7 +299,7 @@ body {
     opacity: 1;
     pointer-events: visible; }
   .container-project .project_img {
-    height: 70%;
+    width: 60%;
     border: 2px solid black;
     cursor: pointer;
     box-shadow: 25px -15px 2px rgba(0, 0, 0, 0.247); }
