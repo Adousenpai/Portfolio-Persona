@@ -268,7 +268,8 @@ body {
       margin-bottom: 1.5em; }
     .container-project .project-text .btn-link {
       display: flex;
-      flex-direction: row; }
+      flex-direction: row;
+      margin-bottom: 0; }
       .container-project .project-text .btn-link #btn1 {
         background-color: #000000;
         text-decoration: none;
@@ -278,33 +279,34 @@ body {
         border: #000000 2px solid;
         padding: 9px;
         transition: all 0.5s ease;
-        min-width: 100px; }
+        min-width: 100px;
+        margin-right: 5px; }
         .container-project .project-text .btn-link #btn1:hover {
           mix-blend-mode: multiply;
           color: #ffffff;
-          background-color: rgba(0, 0, 0, 0.863);
+          background-color: rgba(0, 0, 0, 0.747);
           border: rgba(0, 0, 0, 0) 2px solid; }
       .container-project .project-text .btn-link #btn2 {
-        min-width: 100px;
-        padding: 10px;
-        background-color: transparent;
-        border: #000000 2px solid;
+        background-color: #000000;
         text-decoration: none;
         font-weight: 700;
-        color: #000000;
-        transition: all 0.5s ease; }
+        mix-blend-mode: multiply;
+        color: #ffffff;
+        border: #000000 2px solid;
+        padding: 9px;
+        transition: all 0.5s ease;
+        min-width: 100px; }
         .container-project .project-text .btn-link #btn2:hover {
           mix-blend-mode: multiply;
           color: #ffffff;
-          background-color: rgba(0, 0, 0, 0.863);
+          background-color: rgba(0, 0, 0, 0.747);
           border: rgba(0, 0, 0, 0) 2px solid; }
   .container-project .active {
     opacity: 1;
     pointer-events: visible; }
   .container-project .project_img {
     width: 65%;
-    border: 2px solid black;
-    cursor: pointer; }
+    border: 2px solid black; }
 
 #left {
   opacity: 0;
@@ -355,7 +357,52 @@ body {
       width: 90%; }
     .container-project .project .btn-link {
       display: flex;
-      flex-wrap: wrap; } }
+      justify-content: center; }
+      .container-project .project .btn-link #btn1 {
+        margin-right: 5px; } }
+@media screen and (max-width: 480px) {
+  #project-section {
+    height: 105vh; }
+
+  .container-project .project {
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 5%; }
+    .container-project .project .project-text {
+      height: 35%; }
+      .container-project .project .project-text h2 {
+        text-transform: uppercase;
+        font-size: 1.8rem;
+        color: #000000;
+        white-space: nowrap;
+        margin-bottom: 0.5em; }
+      .container-project .project .project-text p {
+        word-wrap: break-word;
+        width: 100%;
+        font-size: 1rem;
+        margin-bottom: 0.5em; }
+    .container-project .project .project_img {
+      width: 95%; }
+    .container-project .project .btn-link {
+      display: flex;
+      flex-direction: column;
+      justify-content: center; }
+      .container-project .project .btn-link #btn1 {
+        margin-right: 0rem;
+        margin-bottom: 1rem; }
+
+  #right {
+    font-size: 2rem;
+    top: 20%;
+    right: 30%; }
+
+  #left {
+    font-size: 2rem;
+    left: 30%;
+    top: 20%; } }
+#Head {
+  margin-bottom: 2rem; }
+
 .content:after {
   content: "";
   position: absolute;
@@ -382,7 +429,7 @@ body {
   margin-left: auto;
   width: 101%;
   margin-left: -1px;
-  height: 85%;
+  height: 95%;
   background-color: black;
   position: relative;
   padding-top: 3rem;
@@ -432,6 +479,38 @@ body {
     font-size: 1.2rem;
     height: 100%; }
 
+@media screen and (max-width: 480px) {
+  .title {
+    font-size: 3.5rem; }
+
+  .h1-title {
+    font-size: 12rem; }
+
+  .square {
+    clip-path: none;
+    height: 70%; }
+
+  #Morg-header {
+    width: 55%; }
+
+  .char-header .speaker {
+    margin-top: -5rem;
+    width: 430px;
+    height: 260px;
+    background: white;
+    padding-top: 8.5rem;
+    z-index: 3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    -webkit-clip-path: polygon(0 96%, 100% 100%, 100% 24%, 56% 31%, 57% 0, 50% 32%, 0 43%);
+    clip-path: polygon(0 96%, 90% 100%, 100% 29%, 70% 31%, 55% 10%, 65% 34%, 10% 43%); }
+  .char-header p {
+    text-align: left;
+    color: black;
+    width: 65%;
+    font-size: 1.1rem;
+    height: 100%; } }
 .spe {
   color: #c90000;
   font-family: "Dharma"; }
@@ -489,6 +568,17 @@ body {
   position: absolute;
   top: 7%;
   left: 51%; }
+
+@media screen and (max-width: 480px) {
+  .h2-square {
+    width: 380px; }
+    .h2-square h2 {
+      text-align: center;
+      font-size: 2.2rem; }
+    .h2-square:before {
+      background-color: #000000; } }
+.h2-square2 {
+  opacity: 0; }
 
 .inter-section {
   height: 15vh;

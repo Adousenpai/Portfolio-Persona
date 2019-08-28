@@ -73,7 +73,29 @@
     .btn-link {
       display: flex;
       flex-direction: row;
+      margin-bottom: 0;
+
       #btn1 {
+        background-color: $black;
+        text-decoration: none;
+        font-weight: 700;
+        mix-blend-mode: multiply;
+        color: $white;
+        border: $black 2px solid;
+        padding: 9px;
+        transition: all 0.5s ease;
+        min-width: 100px;
+        margin-right: 5px;
+
+        &:hover {
+          mix-blend-mode: multiply;
+          color: $white;
+          background-color: rgba(0, 0, 0, 0.747);
+          border: rgba(0, 0, 0, 0) 2px solid;
+        }
+      }
+
+      #btn2 {
         background-color: $black;
         text-decoration: none;
         font-weight: 700;
@@ -86,24 +108,7 @@
         &:hover {
           mix-blend-mode: multiply;
           color: $white;
-          background-color: rgba(0, 0, 0, 0.863);
-          border: rgba(0, 0, 0, 0) 2px solid;
-        }
-      }
-
-      #btn2 {
-        min-width: 100px;
-        padding: 10px;
-        background-color: transparent;
-        border: $black 2px solid;
-        text-decoration: none;
-        font-weight: 700;
-        color: $black;
-        transition: all 0.5s ease;
-        &:hover {
-          mix-blend-mode: multiply;
-          color: $white;
-          background-color: rgba(0, 0, 0, 0.863);
+          background-color: rgba(0, 0, 0, 0.747);
           border: rgba(0, 0, 0, 0) 2px solid;
         }
       }
@@ -117,7 +122,6 @@
   .project_img {
     width: 65%;
     border: 2px solid black;
-    cursor: pointer;
   }
 }
 
@@ -151,6 +155,7 @@
   }
 }
 
+//  Responsive //////////////////////////////////
 @media screen and (max-width: 992px) {
   #project-section {
     height: 105vh;
@@ -179,8 +184,62 @@
       }
       .btn-link {
         display: flex;
-        flex-wrap: wrap;
+        justify-content: center;
+        #btn1 {
+          margin-right: 5px;
+        }
       }
     }
+  }
+}
+
+@media screen and (max-width: 480px) {
+  #project-section {
+    height: 105vh;
+  }
+  .container-project {
+    .project {
+      flex-direction: column;
+      justify-content: center;
+      padding: 0 5%;
+      .project-text {
+        height: 35%;
+        h2 {
+          text-transform: uppercase;
+          font-size: 1.8rem;
+          color: $black;
+          white-space: nowrap;
+          margin-bottom: 0.5em;
+        }
+        p {
+          word-wrap: break-word;
+          width: 100%;
+          font-size: 1rem;
+          margin-bottom: 0.5em;
+        }
+      }
+      .project_img {
+        width: 95%;
+      }
+      .btn-link {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        #btn1 {
+          margin-right: 0rem;
+          margin-bottom: 1rem;
+        }
+      }
+    }
+  }
+  #right {
+    font-size: 2rem;
+    top: 20%;
+    right: 30%;
+  }
+  #left {
+    font-size: 2rem;
+    left: 30%;
+    top: 20%;
   }
 }
