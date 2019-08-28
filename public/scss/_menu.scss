@@ -1,6 +1,6 @@
 .page {
-  height: 100%;
-  background-color: $black;
+  height: 100vh;
+  background-color: black;
 }
 .content {
   height: 100vh;
@@ -10,7 +10,6 @@
   background-color: $red;
 }
 
-/* basically all styling from now on */
 .menu_toggle {
   z-index: 9;
   position: absolute;
@@ -85,7 +84,7 @@
   transform: translateX(-300px);
   transition: transform 0.7s 0s cubic-bezier(1, 0.005, 0.24, 1);
   &:after {
-    content: '';
+    content: "";
     -webkit-clip-path: polygon(17% 25%, 79% 0, 100% 100%, 79% 0%);
     clip-path: polygon(17% 25%, 79% 0, 100% 100%, 79% 0%);
     position: absolute;
@@ -97,7 +96,7 @@
     background-color: $red;
   }
   &:before {
-    content: '';
+    content: "";
     -webkit-clip-path: polygon(0% 80%, 79% 100%, 100% 100%, 0% 100%);
     clip-path: polygon(0% 100%, 79% 100%, 100% 100%, 0% 100%);
     position: absolute;
@@ -136,7 +135,7 @@
 
 .menu_items a {
   margin-right: 1rem;
-  font-family: 'Dharma', sans-serif;
+  font-family: "Dharma", sans-serif;
   font-size: 2rem;
   text-align: center;
   text-decoration: none;
@@ -176,7 +175,7 @@
 .menu_items a:active .icon {
   color: #f37272;
 }
-/* Let's open up the menu */
+
 .shazam .content {
   transform: rotate(-30deg);
 }
@@ -195,4 +194,8 @@
 }
 .shazam .menu_items li:nth-child(3) {
   transition-delay: 0.48s;
+}
+
+.disapear {
+  opacity: 0 !important;
 }

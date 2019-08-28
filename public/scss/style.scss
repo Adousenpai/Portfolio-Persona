@@ -3,13 +3,13 @@ $black: #000000;
 $white: #ffffff;
 
 @font-face {
-  font-family: 'Dharma';
-  src: url('../fonts/Dharma\ Punk\ 2.ttf') format('truetype');
+  font-family: "Dharma";
+  src: url("../fonts/Dharma\ Punk\ 2.ttf") format("truetype");
 }
 
 @font-face {
-  font-family: 'p5';
-  src: url('/fonts/p5.ttf') format('truetype');
+  font-family: "p5";
+  src: url("/fonts/p5.ttf") format("truetype");
 }
 
 * {
@@ -18,11 +18,7 @@ $white: #ffffff;
   padding: 0;
   box-sizing: border-box;
   letter-spacing: 1px;
-  font-family: 'Poppins', sans-serif;
-
-  h1 {
-    font-family: 'Dharma', sans-serif;
-  }
+  font-family: "Poppins", sans-serif;
 }
 
 body {
@@ -30,14 +26,14 @@ body {
   overflow: hidden;
 }
 
-@import '_menu';
-@import '_project';
-@import '_header';
-@import '_typo';
-@import '_footer';
-@import '_form';
-@import '_login';
-@import '_dashboard';
-@import '_maj';
-@import '_loading';
-@import '_msg';
+@import "_menu";
+@import "_project";
+@import "_header";
+@import "_typo";
+@import "_footer";
+@import "_form";
+@import "_login";
+@import "_dashboard";
+@import "_maj";
+@import "_loading";
+@import "_msg";

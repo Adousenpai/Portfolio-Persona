@@ -1,21 +1,9 @@
 .spe {
   color: $red;
-  font-family: 'Dharma';
+  font-family: "Dharma";
 }
 .spe-h2 {
   color: $red;
-}
-.red-square {
-  z-index: 4;
-  background-color: $red;
-  position: absolute;
-  top: 8%;
-  left: 48%;
-  transform: rotate(-4deg) translate(-50%, -10%);
-  -webkit-clip-path: polygon(0 0, 100% 9%, 95% 70%, 6% 100%);
-  clip-path: polygon(0 0, 100% 9%, 95% 70%, 6% 100%);
-  width: 50%;
-  height: 15%;
 }
 
 .h2-css {
@@ -43,7 +31,7 @@
     font-size: 2.2rem;
   }
   &:before {
-    content: '';
+    content: "";
     background-color: $red;
     position: absolute;
     display: block;

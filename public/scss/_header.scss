@@ -1,71 +1,110 @@
-.square {
-  margin-left: auto;
-  width: 75%;
-  height: 100%;
-  background-image: url('/images/Header-square.svg');
-  background-repeat: no-repeat;
-  background-position: right 0 top 0;
-  background-size: 100%;
-  position: relative;
-  filter: drop-shadow(-150px 80px 0 rgba(0, 0, 0, 0.24));
-}
-.h1-square {
-  background-color: $white;
-  position: absolute;
-  top: 10%;
-  left: 50%;
-  transform: translate(-50%, -10%);
-  -webkit-clip-path: polygon(0 0, 100% 9%, 95% 70%, 6% 100%);
-  clip-path: polygon(0 0, 100% 9%, 95% 70%, 6% 100%);
-  width: 50%;
-  height: 15%;
-  z-index: 5;
-  h1 {
-    text-align: center;
-    font-size: 5rem;
-    transform: rotate(-2deg);
-    padding-right: 2rem;
-    padding-top: 3px;
-  }
+.content {
   &:after {
-    content: '';
-    background-color: cyan;
+    content: "";
     position: absolute;
-    top: 10%;
-    left: 50%;
-    transform: translate(-50%, -10%);
-    -webkit-clip-path: polygon(0 0, 100% 9%, 95% 9%, 6% 10%);
-    clip-path: polygon(0 0, 100% 9%, 95% 9%, 6% 10%);
+    top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
-    z-index: 5;
+    background-color: rgba(0, 0, 0, 0.171);
+    -webkit-clip-path: polygon(0 0, 0 15%, 100% 0);
+    clip-path: polygon(0 0, 0 5%, 100% 0);
   }
+  &:before {
+    content: "";
+    position: absolute;
+    top: 78%;
+    transform: translate(0, -50%);
+    left: 0;
+    width: 100%;
+    height: 80%;
+    background-color: rgba(0, 0, 0, 0.171);
+    -webkit-clip-path: polygon(0 0, 93% 3%, 100% 100%, 6% 100%);
+    clip-path: polygon(2% 0, 100% 10%, 100% 70%, 12% 75%);
+  }
+  // margin-bottom: 5rem;
+}
+
+.square {
+  margin-left: auto;
+  width: 101%;
+  margin-left: -1px;
+  height: 85%;
+
+  background-color: black;
+  position: relative;
+  padding-top: 3rem;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+
+  -webkit-clip-path: polygon(0 0, 93% 3%, 100% 100%, 6% 100%);
+  clip-path: polygon(5% 0, 100% 10%, 100% 70%, 15% 75%);
+}
+
+.title {
+  text-align: center;
+  font-size: 4.5rem;
+  font-family: "Poppins";
+  color: black;
+  -webkit-text-fill-color: white;
+  -webkit-text-stroke-width: 4px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  height: 240px;
+}
+
+.h1-title {
+  font-size: 13rem;
+  margin-right: -4rem;
 }
 
 .char-header {
-  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   width: 100%;
-  top: 40%;
-  left: 10%;
-  transform: translate(0, -50%);
 
   #Morg-header {
-    width: 20%;
-    filter: drop-shadow(-15px 15px 2px black);
   }
 
-  #Speak {
-    width: 55%;
-    position: absolute;
-    top: 17%;
-    left: 15%;
+  .speaker {
+    margin-top: -5rem;
+    width: 550px;
+    height: 260px;
+    background: white;
+    padding-top: 8.5rem;
+    z-index: 3;
+    -webkit-clip-path: polygon(
+      0 96%,
+      100% 100%,
+      100% 24%,
+      56% 31%,
+      57% 0,
+      50% 32%,
+      0 43%
+    );
+    clip-path: polygon(
+      0 96%,
+      90% 100%,
+      100% 29%,
+      90% 31%,
+      60% 0,
+      85% 32%,
+      10% 43%
+    );
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
   p {
-    color: white;
-    width: 30%;
-    position: absolute;
-    top: 45%;
-    left: 35%;
+    text-align: left;
+    color: black;
+    width: 75%;
     font-size: 1.2rem;
+    height: 100%;
   }
 }
