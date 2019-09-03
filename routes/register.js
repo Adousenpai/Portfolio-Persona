@@ -3,7 +3,7 @@ const User = require("../models/User");
 const bcrypt = require("bcryptjs");
 const passport = require("passport");
 
-// Register Page
+// // Register Page
 // router.get("/register", (req, res) => {
 //   res.render("register");
 // });

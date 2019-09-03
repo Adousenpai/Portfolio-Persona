@@ -18,7 +18,7 @@ body {
 
 .page {
   height: 100vh;
-  background-color: black; }
+  background-color: #220000; }
 
 .content {
   height: 100vh;
@@ -374,8 +374,7 @@ body {
         text-transform: uppercase;
         font-size: 1.8rem;
         color: #000000;
-        white-space: nowrap;
-        margin-bottom: 0.5em; }
+        white-space: nowrap; }
       .container-project .project .project-text p {
         word-wrap: break-word;
         width: 100%;
@@ -393,13 +392,15 @@ body {
 
   #right {
     font-size: 2rem;
-    top: 20%;
-    right: 30%; }
+    top: 62%;
+    right: 15%;
+    color: white; }
 
   #left {
     font-size: 2rem;
-    left: 30%;
-    top: 20%; } }
+    top: 62%;
+    left: 15%;
+    color: white; } }
 #Head {
   margin-bottom: 2rem; }
 
@@ -438,7 +439,7 @@ body {
   justify-content: flex-start;
   align-items: center;
   -webkit-clip-path: polygon(0 0, 93% 3%, 100% 100%, 6% 100%);
-  clip-path: polygon(5% 0, 100% 10%, 100% 70%, 15% 75%); }
+  clip-path: polygon(5% 0, 100% 10%, 100% 65%, 15% 70%); }
 
 .title {
   text-align: center;
@@ -462,8 +463,9 @@ body {
   width: 100%; }
   .char-header .speaker {
     margin-top: -5rem;
-    width: 550px;
+    width: 50%;
     height: 260px;
+    min-width: 420px;
     background: white;
     padding-top: 8.5rem;
     z-index: 3;
@@ -495,7 +497,8 @@ body {
 
   .char-header .speaker {
     margin-top: -5rem;
-    width: 430px;
+    width: 30%;
+    min-width: 380px;
     height: 260px;
     background: white;
     padding-top: 8.5rem;
@@ -508,8 +511,8 @@ body {
   .char-header p {
     text-align: left;
     color: black;
-    width: 65%;
-    font-size: 1.1rem;
+    width: 75%;
+    font-size: 1rem;
     height: 100%; } }
 .spe {
   color: #c90000;
@@ -571,7 +574,7 @@ body {
 
 @media screen and (max-width: 480px) {
   .h2-square {
-    width: 380px; }
+    width: 250px; }
     .h2-square h2 {
       text-align: center;
       font-size: 2.2rem; }
@@ -724,6 +727,8 @@ footer {
   clip-path: polygon(2% 6%, 91% 0, 99% 100%, 2% 90%);
   position: absolute;
   background-color: white;
+  width: 70%;
+  max-width: 600px;
   top: 50%;
   left: 20%;
   transform: translate(0, -50%);
@@ -766,7 +771,8 @@ footer {
 .contact-square {
   -webkit-clip-path: polygon(0 0, 100% 9%, 95% 70%, 6% 100%);
   clip-path: polygon(0 0, 100% 9%, 95% 70%, 9% 100%);
-  width: 400px;
+  width: 100%;
+  max-width: 400px;
   height: 65px;
   z-index: 5;
   background-color: black;
@@ -851,6 +857,13 @@ footer {
   top: 0;
   opacity: 0; }
 
+@media screen and (max-width: 700px) {
+  .contact-square {
+    white-space: nowrap;
+    clip-path: none;
+    height: 50%; }
+    .contact-square h2 {
+      font-size: 1.5rem !important; } }
 .login-form {
   -webkit-clip-path: polygon(0 6%, 100% 0, 100% 100%, 0 84%);
   clip-path: polygon(2% 6%, 91% 0, 99% 100%, 2% 90%);

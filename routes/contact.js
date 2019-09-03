@@ -1,14 +1,14 @@
-const router = require('express').Router();
-const Contact = require('../models/ContactModel');
-const mailer = require('nodemailer');
+const router = require("express").Router();
+const Contact = require("../models/ContactModel");
+const mailer = require("nodemailer");
 
 // Page Contact
-router.get('/contact', (req, res) => {
-  res.render('contact');
+router.get("/contact", (req, res) => {
+  res.render("contact");
 });
 
 //  Requete du Formulaire Contact
-router.post('/contact-post', (req, res) => {
+router.post("/contact-post", (req, res) => {
   const contactSchema = new Contact(req.body);
   contactSchema.save((err, Project) => {
     const output = `
@@ -24,24 +24,24 @@ router.post('/contact-post', (req, res) => {
   `;
 
     let transporter = mailer.createTransport({
-      service: 'gmail',
+      service: "gmail",
       auth: {
-        user: 'simplonportfolio@gmail.com', // generated ethereal user
-        pass: 'Simplonco94' // generated ethereal password
+        user: process.env.MAIL, // generated ethereal user
+        pass: process.env.LOL // generated ethereal password
       }
     });
 
     // send mail with defined transport object
     let info = transporter.sendMail({
       from: '"NodeMailer Contact" <simplonportfolio@gmail.com>', // sender address
-      to: 'maxime.diopkaypaghian@gmail.com', // list of receivers
-      subject: 'Node Contact Request', // Subject line
-      text: 'Hello world?', // plain text body
+      to: "maxime.diopkaypaghian@gmail.com", // list of receivers
+      subject: "Node Contact Request", // Subject line
+      text: "Hello world?", // plain text body
       html: output // html body
     });
     // Envois du mail
-    req.flash('email', 'Email has been sent');
-    res.redirect('/contact');
+    req.flash("email", "Email has been sent");
+    res.redirect("/contact");
   });
 });
 

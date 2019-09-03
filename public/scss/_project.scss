@@ -209,7 +209,6 @@
           font-size: 1.8rem;
           color: $black;
           white-space: nowrap;
-          margin-bottom: 0.5em;
         }
         p {
           word-wrap: break-word;
@@ -234,12 +233,14 @@
   }
   #right {
     font-size: 2rem;
-    top: 20%;
-    right: 30%;
+    top: 62%;
+    right: 15%;
+    color: white;
   }
   #left {
     font-size: 2rem;
-    left: 30%;
-    top: 20%;
+    top: 62%;
+    left: 15%;
+    color: white;
   }
 }

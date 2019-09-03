@@ -18,6 +18,8 @@
   clip-path: polygon(2% 6%, 91% 0, 99% 100%, 2% 90%);
   position: absolute;
   background-color: white;
+  width: 70%;
+  max-width: 600px;
   top: 50%;
   left: 20%;
   transform: translate(0, -50%);
@@ -67,7 +69,9 @@
 .contact-square {
   -webkit-clip-path: polygon(0 0, 100% 9%, 95% 70%, 6% 100%);
   clip-path: polygon(0 0, 100% 9%, 95% 70%, 9% 100%);
-  width: 400px;
+  width: 100%;
+  max-width: 400px;
+
   height: 65px;
   z-index: 5;
   background-color: black;
@@ -163,4 +167,16 @@
   left: 0;
   top: 0;
   opacity: 0;
+}
+
+@media screen and (max-width: 700px) {
+  .contact-square {
+    white-space: nowrap;
+    clip-path: none;
+    height: 50%;
+
+    h2 {
+      font-size: 1.5rem !important;
+    }
+  }
 }

@@ -45,7 +45,7 @@
   align-items: center;
 
   -webkit-clip-path: polygon(0 0, 93% 3%, 100% 100%, 6% 100%);
-  clip-path: polygon(5% 0, 100% 10%, 100% 70%, 15% 75%);
+  clip-path: polygon(5% 0, 100% 10%, 100% 65%, 15% 70%);
 }
 
 .title {
@@ -76,8 +76,9 @@
 
   .speaker {
     margin-top: -5rem;
-    width: 550px;
+    width: 50%;
     height: 260px;
+    min-width: 420px;
     background: white;
     padding-top: 8.5rem;
     z-index: 3;
@@ -132,7 +133,8 @@
   .char-header {
     .speaker {
       margin-top: -5rem;
-      width: 430px;
+      width: 30%;
+      min-width: 380px;
       height: 260px;
       background: white;
       padding-top: 8.5rem;
@@ -164,8 +166,8 @@
     p {
       text-align: left;
       color: black;
-      width: 65%;
-      font-size: 1.1rem;
+      width: 75%;
+      font-size: 1rem;
       height: 100%;
     }
   }

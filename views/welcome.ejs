@@ -8,7 +8,6 @@
     <div class="menu-after"></div>
     <ul class="menu_items">
       <li class="list"><i class="fas fa-address-book  fa-2x"></i><a href="/Contact">Contact</a></li>
-      <li class="list"><i class="fas fa-sign-in-alt fa-2x"></i><a href="/users/login">Login</a></li>
     </ul>
     <main class="content">
         
@@ -42,8 +41,8 @@
             <h2> <%= project[i].title %> </h2>
             <p><%= project[i].description %></p>
             <div class="btn-link">
-            <a id="btn1" href="<%= project[i].prev %>" target="_blank" >Aperçu <i class="fas fa-external-link-alt"></i></a>
-            <a  id="btn2" href="<%= project[i].git %>" target="_blank">Github<i class="fas fa-external-link-alt"></i></a>
+            <a id="btn1" href="<%= project[i].prev %>" target="_blank" >Aperçu </a>
+            <a  id="btn2" href="<%= project[i].git %>" target="_blank">Github</a>
           </div>
           </div>
         <img src="/uploads/<%= project[i].image %>" class="project_img">
