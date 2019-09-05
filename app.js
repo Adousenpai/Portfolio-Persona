@@ -1,7 +1,7 @@
 const express = require("express");
 const app = express();
 const expressLayouts = require("express-ejs-layouts");
-const port = process.env.PORT || 3000;
+const port = 3000;
 const dotenv = require("dotenv");
 const mongoose = require("mongoose");
 const flash = require("connect-flash");
@@ -46,7 +46,9 @@ app.use((req, res, next) => {
   next();
 });
 // Serveur
-app.listen(port, () => console.log(`Example app listening on port ${port} !`));
+app.listen(process.env.PORT || port, () =>
+  console.log(`Example app listening on port ${port} !`)
+);
 
 // Link CSS
 app.use(express.static("public"));
