@@ -199,3 +199,23 @@
 .disapear {
   opacity: 0 !important;
 }
+
+@media screen and (max-width: 400px) {
+  .menu_toggle {
+    background: transparent;
+  }
+  .menu-after {
+    opacity: 0;
+  }
+
+  .menu_toggle .menu_open,
+  .menu_toggle .menu_close {
+    position: absolute;
+    top: 40%;
+    left: 40%;
+    margin-top: -15px;
+    margin-left: -12px;
+    transition: transform 0.7s cubic-bezier(1, 0.005, 0.24, 1);
+    color: white;
+  }
+}

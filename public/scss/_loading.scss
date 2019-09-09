@@ -18,6 +18,7 @@ $bounce_height: 30px;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  white-space: nowrap;
 }
 
 .text {
@@ -68,4 +69,10 @@ $bounce_height: 30px;
 .done {
   opacity: 0;
   pointer-events: none;
+}
+
+@media screen and (max-width: 500px) {
+  .text {
+    font-size: 1.2rem;
+  }
 }

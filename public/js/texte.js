@@ -1,11 +1,11 @@
 let x = 0,
   text;
 text =
-  "Bonjour je m'appel Maxime, je suis développeur web ! Bienvenue sur mon portfolio !";
+  "Bonjour et bienvenue sur mon portfolio ! Je m'appelle Maxime et je suis développeur web :) !";
 
 function typing() {
   if (x < text.length) {
-    document.getElementById('texte').innerHTML += text.charAt(x);
+    document.getElementById("texte").innerHTML += text.charAt(x);
     x++;
     setTimeout(typing, 60);
   }
