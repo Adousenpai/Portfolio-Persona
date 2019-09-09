@@ -200,7 +200,13 @@
   opacity: 0 !important;
 }
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 1300px) {
+  .menu_items {
+    bottom: 5%;
+  }
+}
+
+@media screen and (max-width: 500px) {
   .menu_toggle {
     background: transparent;
   }

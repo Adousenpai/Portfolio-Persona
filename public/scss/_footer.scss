@@ -154,7 +154,48 @@ footer {
   transform: rotate(20deg);
 }
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 1030px) {
+  .footer-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    left: 50%;
+    top: 25%;
+    z-index: 3;
+    .char-footer {
+      width: 30%;
+      display: flex;
+      justify-content: center;
+
+      img {
+        width: 70%;
+      }
+    }
+    a {
+      color: white;
+      font-size: 1.7rem;
+    }
+    p {
+      color: white;
+      text-align: center;
+      font-size: 1.7rem;
+    }
+    i {
+      font-size: 4rem;
+    }
+
+    .git:hover {
+      color: black;
+    }
+  }
+
+  .reseau {
+    margin-bottom: 7rem;
+  }
+}
+
+@media screen and (max-width: 500px) {
   .footer-text {
     display: flex;
     flex-direction: column;

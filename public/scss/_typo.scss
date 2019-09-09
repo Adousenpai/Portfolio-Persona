@@ -62,7 +62,23 @@
   left: 51%;
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 1030px) {
+  .h2-square {
+    width: 420px;
+    height: 100px;
+
+    h2 {
+      // font-family: 'Dharma';
+      text-align: center;
+      font-size: 4rem;
+    }
+    &:before {
+      background-color: $black;
+    }
+  }
+}
+
+@media screen and (max-width: 500px) {
   .h2-square {
     width: 220px;
     height: 50px;
